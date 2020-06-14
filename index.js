@@ -11,6 +11,13 @@ const tutorials = [
   'what is JSONP?'
 ];
 
+
+// substring the remaining to lowercase and join back together
 const titleCased = () => {
-  return tutorials
+
+  let newTutorials = tutorials.map(tutorial => tutorial.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" "));  
+
+  return newTutorials;
 }
+
+
